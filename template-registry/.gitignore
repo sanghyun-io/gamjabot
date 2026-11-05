@@ -1,0 +1,7 @@
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+publishers*.json
+__pycache__/
+.venv/

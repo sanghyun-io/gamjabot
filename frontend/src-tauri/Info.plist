@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>Gamja Bot uses the microphone when you choose to dictate a message.</string>
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>Gamja Bot converts your speech to text on this Mac when you choose to dictate a message.</string>
+  <key>NSScreenCaptureUsageDescription</key>
+  <string>Gamja Bot captures the screen only when you approve an Agent screen action.</string>
+</dict></plist>

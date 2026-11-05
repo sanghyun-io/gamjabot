@@ -1,0 +1,47 @@
+{
+  "starter_intent": {
+    "project_title": "First team",
+    "room_title": "First decision",
+    "agents": [
+      {"role": "proposer", "name": "Proposer", "connection_id": 41, "model_id": "synthetic-model"},
+      {"role": "reviewer", "name": "Reviewer", "connection_id": 41, "model_id": "synthetic-model"}
+    ]
+  },
+  "text_test_preview": {"profile": "text", "model_id": "synthetic-model", "max_request_count": 1},
+  "text_test_result": {
+    "ok": true,
+    "code": "connected",
+    "message": "Connection test succeeded.",
+    "profile": "text",
+    "model_id": "synthetic-model",
+    "max_request_count": 1,
+    "actual_request_count": 1,
+    "record": {
+      "id": 71,
+      "connection_id": 41,
+      "tested_at": "2026-10-06T00:00:00Z",
+      "duration_ms": 12,
+      "model_id": "synthetic-model",
+      "ok": true,
+      "code": "connected",
+      "config_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "config_current": true,
+      "credential_observation": "not_required",
+      "verified_capabilities": null,
+      "profile": "text",
+      "actual_request_count": 1
+    }
+  },
+  "starter_preview": {
+    "plan_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "project_title": "First team",
+    "room_title": "First decision",
+    "agents": [
+      {"role": "proposer", "requested_name": "Proposer", "name": "Proposer", "connection_id": 41, "model_id": "synthetic-model", "test_history_id": 71, "config_revision": 1, "config_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+      {"role": "reviewer", "requested_name": "Reviewer", "name": "Reviewer", "connection_id": 41, "model_id": "synthetic-model", "test_history_id": 71, "config_revision": 1, "config_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}
+    ],
+    "policy": {"max_rounds": 2, "max_tool_calls": 0, "max_executor_seconds": 60}
+  },
+  "starter_apply_result": {"project_id": 81, "room_id": 91, "agents": {"proposer": 101, "reviewer": 102}, "replayed": false},
+  "starter_last_result": {"project_id": 81, "room_id": 91, "agents": {"proposer": 101, "reviewer": 102}}
+}

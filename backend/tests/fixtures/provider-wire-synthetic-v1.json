@@ -1,0 +1,101 @@
+[
+  {
+    "version": 1,
+    "current_generation_fingerprint": "abababababababababababababababababababababababababababababababab",
+    "max_frame_bytes": 14000000,
+    "max_in_flight": 4
+  },
+  {
+    "type": "provider_bind_v1",
+    "current_generation_fingerprint": "abababababababababababababababababababababababababababababababab",
+    "binding": {
+      "credential_ref": "1:2:cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+      "owner_id": 1,
+      "owner_epoch": "efefefefefefefefefefefefefefefefefefefefefefefefefefefefefefefef",
+      "connection_id": 2,
+      "config_revision": 3,
+      "auth_grant_revision": 4,
+      "provider_id": "azure-openai",
+      "auth_method_id": "native_chain",
+      "public_config_fingerprint": "0101010101010101010101010101010101010101010101010101010101010101",
+      "descriptor_revision": 1,
+      "protocol": "azure_openai_responses_v1",
+      "model_id": "deployment-1",
+      "public_fields": {}
+    },
+    "version": 1,
+    "request_id": 1
+  },
+  {
+    "type": "provider_execute_v1",
+    "handle": "5656565656565656565656565656565656565656565656565656565656565656",
+    "call": {
+      "descriptor_revision": 1,
+      "protocol": "azure_openai_responses_v1",
+      "model_id": "deployment-1",
+      "public_fields": {},
+      "physical_model_request_budget": 1,
+      "request": {
+        "scope": {
+          "connection_id": 2
+        },
+        "messages": []
+      }
+    },
+    "version": 1,
+    "request_id": 2
+  },
+  {
+    "type": "provider_cancel_v1",
+    "handle": "5656565656565656565656565656565656565656565656565656565656565656",
+    "target_request_id": 2,
+    "version": 1,
+    "request_id": 3
+  },
+  {
+    "type": "provider_release_v1",
+    "handle": "5656565656565656565656565656565656565656565656565656565656565656",
+    "version": 1,
+    "request_id": 4
+  },
+  {
+    "type": "provider_bound_v1",
+    "version": 1,
+    "request_id": 1,
+    "handle": "5656565656565656565656565656565656565656565656565656565656565656"
+  },
+  {
+    "type": "provider_result_v1",
+    "version": 1,
+    "request_id": 2,
+    "handle": "5656565656565656565656565656565656565656565656565656565656565656",
+    "result": {
+      "ok": true,
+      "response_id": "synthetic-response",
+      "model": "deployment-1",
+      "text": "synthetic response",
+      "tool_calls": [],
+      "physical_model_request_count": 1
+    }
+  },
+  {
+    "type": "provider_cancelled_v1",
+    "version": 1,
+    "request_id": 3,
+    "handle": "5656565656565656565656565656565656565656565656565656565656565656",
+    "target_request_id": 2
+  },
+  {
+    "type": "provider_released_v1",
+    "version": 1,
+    "request_id": 4,
+    "handle": "5656565656565656565656565656565656565656565656565656565656565656"
+  },
+  {
+    "type": "provider_error_v1",
+    "version": 1,
+    "request_id": 5,
+    "operation": "bind",
+    "error_code": "configuration_changed"
+  }
+]

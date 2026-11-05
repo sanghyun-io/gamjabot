@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "wire_max_bytes": 4096,
+  "wire_size_basis": "raw UTF-8 HTTP request body bytes",
+  "client_serialization": "compact JSON with unescaped Unicode",
+  "queue_max_bytes": 65536,
+  "queue_max_events": 256,
+  "unsent_ttl_days": 7,
+  "fields": ["schema_version", "report_id", "mode", "app_version", "build_id", "os", "os_version", "arch", "occurred_at", "component", "stage", "code", "occurrences", "transitions", "description", "diagnostics"],
+  "required": ["schema_version", "report_id", "mode", "app_version", "build_id", "os", "os_version", "arch", "occurred_at", "component", "stage", "code", "occurrences", "transitions"],
+  "mode": ["manual", "automatic"],
+  "os": ["macos", "windows"],
+  "arch": ["aarch64", "x86_64"],
+  "component": ["host", "backend", "frontend", "native"],
+  "stage": ["startup", "ready", "runtime", "tool", "render"],
+  "code": ["sidecar_missing", "sidecar_spawn_failed", "backend_init_failed", "backend_not_ready", "sidecar_exited", "backend_runtime_failed", "frontend_render_failed", "native_action_failed", "unexpected_failure"],
+  "limits": {"report_id_hex_chars": 32, "app_version_ascii_chars": 64, "build_id_ascii_chars": 64, "os_version_chars": 32, "occurrences_min": 1, "occurrences_max": 255, "transitions_max": 16, "manual_description_chars_max": 1000, "diagnostics_max": 16, "exception_chain_max": 3, "frames_max": 4},
+  "diagnostic_extension": {
+    "version": 1,
+    "description": "Auth diagnostic extension for auth_remember and auth_restore stages",
+    "auth_stages": ["auth_remember", "auth_restore"],
+    "auth_failure_codes": ["credential_locked", "secret_store_unavailable"],
+    "auth_fields": {
+      "os_status": {"type": "integer", "signed": true, "bits": 32, "required": false},
+      "operation": {"type": "string", "enum": ["sec_item_add", "sec_item_update", "sec_item_copy_matching", "sec_item_delete"], "required": false, "stage": "auth_remember"},
+      "cleanup": {"type": "string", "enum": ["success", "failed", "unknown"], "required": true, "stage": "auth_remember"}
+    },
+    "auth_constraints": {
+      "auth_remember": {"cleanup_required": true, "operation_optional": true},
+      "auth_restore": {"cleanup_forbidden": true, "operation_forbidden": true}
+    },
+    "backward_compatible": true,
+    "historical_records": "Old turn diagnostics remain valid without auth fields"
+  }
+}

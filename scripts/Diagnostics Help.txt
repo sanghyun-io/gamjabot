@@ -1,0 +1,13 @@
+Gamja Bot — local diagnostics when the Reports screen will not open
+
+In Finder, choose Go > Go to Folder, then enter:
+~/Library/Application Support/top.gamja.bot/reporting/state.json
+
+Open the file in a local text editor for read-only inspection. Do not edit it.
+The file can contain descriptions you entered and report history, so keep it
+private. Do not attach, post, or upload it as a report. A local file is not
+proof of submission; only an accepted receipt shown by the app confirms that
+a report was sent. The file may be absent if reporting did not initialize or
+local storage failed. Reading it does not send a report.
+
+This help is also inside Gamja Bot.app/Contents/Resources/Diagnostics Help.txt.

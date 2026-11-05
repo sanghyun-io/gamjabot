@@ -1,0 +1,52 @@
+[package]
+name = "gamja-bot"
+version = "1.0.0"
+description = "Grok-style multi-agent system"
+authors = ["Gamja Team"]
+license = "MIT"
+repository = ""
+edition = "2021"
+rust-version = "1.90"
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[features]
+default = []
+
+[build-dependencies]
+cc = "=1.5.1"
+tauri-build = { version = "2.7.0", features = [] }
+
+[dependencies]
+gamja-core-host = { path = "../../core-host" }
+gamja-artifact = { path = "../../artifact-module" }
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+tauri = { version = "2.12.0", features = [] }
+tauri-plugin-deep-link = "=2.5.0"
+getrandom = "0.3"
+base64 = "0.22"
+sha2 = "0.10"
+png = "0.17"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["json", "native-tls"] }
+tokio = { version = "1", features = ["macros", "time", "rt"] }
+
+[target.'cfg(any(target_os = "windows", target_os = "linux"))'.dependencies]
+tauri-plugin-single-instance = { version = "=2.5.0", features = ["deep-link"] }
+
+[target.'cfg(all(target_os = "macos", target_arch = "aarch64"))'.dependencies]
+objc2 = "=0.6.4"
+block2 = "=0.6.2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+libc = "0.2"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Storage_FileSystem"] }
+
+[dev-dependencies]
+tauri = { version = "2.12.0", features = ["test"] }

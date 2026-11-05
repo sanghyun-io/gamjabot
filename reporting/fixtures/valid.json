@@ -1,0 +1,182 @@
+[
+  {
+    "schema_version": 1,
+    "report_id": "0123456789abcdef0123456789abcdef",
+    "mode": "manual",
+    "app_version": "1.0.0",
+    "build_id": "unknown",
+    "os": "macos",
+    "os_version": "14.7.1",
+    "arch": "aarch64",
+    "occurred_at": "2026-09-29T00:00:00Z",
+    "component": "backend",
+    "stage": "startup",
+    "code": "backend_init_failed",
+    "occurrences": 1,
+    "transitions": []
+  },
+  {
+    "schema_version": 1,
+    "report_id": "abcdef0123456789abcdef0123456789",
+    "mode": "manual",
+    "app_version": "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+    "build_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "os": "macos",
+    "os_version": "1.234567890123456789012345678901",
+    "arch": "aarch64",
+    "occurred_at": "2026-09-29T00:00:00Z",
+    "component": "backend",
+    "stage": "startup",
+    "code": "backend_init_failed",
+    "occurrences": 255,
+    "transitions": [
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      }
+    ],
+    "description": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  {
+    "schema_version": 1,
+    "report_id": "abcdef0123456789abcdef0123456789",
+    "mode": "manual",
+    "app_version": "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+    "build_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "os": "macos",
+    "os_version": "1.234567890123456789012345678901",
+    "arch": "aarch64",
+    "occurred_at": "2026-09-29T00:00:00Z",
+    "component": "backend",
+    "stage": "startup",
+    "code": "backend_init_failed",
+    "occurrences": 255,
+    "transitions": [
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      },
+      {
+        "stage": "startup",
+        "code": "backend_init_failed"
+      }
+    ],
+    "description": "가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  }
+]

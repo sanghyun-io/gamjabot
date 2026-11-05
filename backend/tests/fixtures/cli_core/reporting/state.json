@@ -1,0 +1,106 @@
+{
+  "events": [
+    {
+      "event_id": "11111111111111111111111111111111",
+      "occurred_at": "2026-09-30T00:00:00Z",
+      "component": "backend",
+      "stage": "startup",
+      "code": "backend_init_failed",
+      "app_version": "1.0.0",
+      "build_id": "fixture",
+      "os": "macos",
+      "os_version": "14.0",
+      "arch": "aarch64"
+    }
+  ],
+  "reports": [
+    {
+      "draft": {
+        "envelope": {
+          "schema_version": 1,
+          "report_id": "22222222222222222222222222222222",
+          "mode": "manual",
+          "app_version": "1.0.0",
+          "build_id": "fixture",
+          "os": "macos",
+          "os_version": "14.0",
+          "arch": "aarch64",
+          "occurred_at": "2026-09-30T00:00:00Z",
+          "component": "backend",
+          "stage": "startup",
+          "code": "backend_init_failed",
+          "occurrences": 1,
+          "transitions": []
+        },
+        "body": "{\"schema_version\":1,\"report_id\":\"22222222222222222222222222222222\",\"mode\":\"manual\",\"app_version\":\"1.0.0\",\"build_id\":\"fixture\",\"os\":\"macos\",\"os_version\":\"14.0\",\"arch\":\"aarch64\",\"occurred_at\":\"2026-09-30T00:00:00Z\",\"component\":\"backend\",\"stage\":\"startup\",\"code\":\"backend_init_failed\",\"occurrences\":1,\"transitions\":[]}"
+      },
+      "state": "pending",
+      "attempts": 2,
+      "attempt_times": [1790726400, 1790726460],
+      "next_attempt_at": 1790726580,
+      "receipt": null
+    },
+    {
+      "draft": {
+        "envelope": {
+          "schema_version": 1,
+          "report_id": "33333333333333333333333333333333",
+          "mode": "automatic",
+          "app_version": "1.0.0",
+          "build_id": "fixture",
+          "os": "macos",
+          "os_version": "14.0",
+          "arch": "aarch64",
+          "occurred_at": "2026-09-30T00:01:00Z",
+          "component": "backend",
+          "stage": "startup",
+          "code": "backend_not_ready",
+          "occurrences": 1,
+          "transitions": []
+        },
+        "body": "{\"schema_version\":1,\"report_id\":\"33333333333333333333333333333333\",\"mode\":\"automatic\",\"app_version\":\"1.0.0\",\"build_id\":\"fixture\",\"os\":\"macos\",\"os_version\":\"14.0\",\"arch\":\"aarch64\",\"occurred_at\":\"2026-09-30T00:01:00Z\",\"component\":\"backend\",\"stage\":\"startup\",\"code\":\"backend_not_ready\",\"occurrences\":1,\"transitions\":[]}"
+      },
+      "state": "pending",
+      "attempts": 1,
+      "attempt_times": [1790726460],
+      "next_attempt_at": 1790726520,
+      "receipt": null
+    },
+    {
+      "draft": {
+        "envelope": {
+          "schema_version": 1,
+          "report_id": "44444444444444444444444444444444",
+          "mode": "automatic",
+          "app_version": "1.0.0",
+          "build_id": "fixture",
+          "os": "macos",
+          "os_version": "14.0",
+          "arch": "aarch64",
+          "occurred_at": "2026-09-30T00:02:00Z",
+          "component": "host",
+          "stage": "runtime",
+          "code": "unexpected_failure",
+          "occurrences": 1,
+          "transitions": []
+        },
+        "body": "{\"schema_version\":1,\"report_id\":\"44444444444444444444444444444444\",\"mode\":\"automatic\",\"app_version\":\"1.0.0\",\"build_id\":\"fixture\",\"os\":\"macos\",\"os_version\":\"14.0\",\"arch\":\"aarch64\",\"occurred_at\":\"2026-09-30T00:02:00Z\",\"component\":\"host\",\"stage\":\"runtime\",\"code\":\"unexpected_failure\",\"occurrences\":1,\"transitions\":[]}"
+      },
+      "state": "accepted",
+      "attempts": 1,
+      "attempt_times": [1790726520],
+      "next_attempt_at": 0,
+      "receipt": {
+        "report_id": "44444444444444444444444444444444",
+        "receipt_id": "55555555555555555555555555555555",
+        "accepted_at": "2026-09-30T00:03:00Z"
+      }
+    }
+  ],
+  "auto_reporting_enabled": true,
+  "consent_generation": 4,
+  "discarded": 2,
+  "discarded_expired": 1,
+  "discarded_capacity": 1,
+  "auto_attempt_times": [1790726460]
+}

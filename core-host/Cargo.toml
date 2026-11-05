@@ -1,0 +1,80 @@
+[package]
+name = "gamja-core-host"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "gamja"
+path = "src/main.rs"
+
+[[bin]]
+name = "gamja-credential-release-authority"
+path = "src/bin/credential_release_authority.rs"
+
+[[bin]]
+name = "gamja-mcp-credential-release-authority"
+path = "src/bin/mcp_credential_release_authority.rs"
+
+[[bin]]
+name = "gamja-template-publisher-credential-release-authority"
+path = "src/bin/publisher_credential_release_authority.rs"
+
+[[bin]]
+name = "gamja-vault-credential-release-authority"
+path = "src/bin/vault_broker_authority.rs"
+
+[[bin]]
+name = "gamja-slack-credential-release-authority"
+path = "src/bin/slack_credential_release_authority.rs"
+
+[dependencies]
+gamja-platform-helper = { path = "../platform-helper", default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+url = "2"
+fs2 = "0.4"
+getrandom = "0.3"
+sha2 = "0.10"
+subtle = "2"
+zeroize = { version = "=1.9.0", features = ["serde"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+reqwest = { version = "0.13.5", default-features = false, features = ["json", "native-tls"] }
+tokio = { version = "1", features = ["io-util", "macros", "process", "rt", "sync", "time"] }
+ctrlc = { version = "3", features = ["termination"] }
+async-trait = "=0.1.92"
+base64 = "=0.23.1"
+azure_core = { version = "=1.0.0", default-features = false, features = ["tokio"] }
+azure_identity = { version = "=1.0.0", default-features = false, features = ["tokio"] }
+aws-config = { version = "=1.12.0", default-features = false, features = ["default-https-client", "rt-tokio", "sso"] }
+aws-credential-types = "=1.3.0"
+aws-sdk-bedrockruntime = "=1.148.0"
+aws-sdk-sso = { version = "=1.114.0", default-features = false, features = ["default-https-client", "rt-tokio"] }
+aws-sdk-sts = { version = "=1.119.0", default-features = false, features = ["default-https-client", "rt-tokio"] }
+aws-smithy-types = "=1.8.1"
+google-cloud-auth = "=1.16.0"
+google-cloud-aiplatform-v1 = { version = "=1.16.0", default-features = false, features = ["prediction-service", "default-rustls-provider"] }
+http = "=1.5.0"
+sha1 = "=0.10.7"
+
+[dev-dependencies]
+
+[target.'cfg(all(target_os = "macos", target_arch = "aarch64"))'.dependencies]
+# WebSocket dependency logs raw frames/URLs at trace and close payloads at debug.
+log = { version = "=0.4.34", features = ["max_level_info", "release_max_level_info"] }
+tokio-tungstenite = { version = "=0.30.0", default-features = false, features = ["connect", "rustls-tls-native-roots"] }
+futures-util = { version = "=0.3.34", features = ["sink"] }
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation = "0.10"
+security-framework = "3.7"
+security-framework-sys = "2.17"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_Foundation", "Win32_Security", "Win32_Security_Authorization", "Win32_System_Threading", "Win32_Storage_FileSystem", "Win32_System_Memory", "Win32_System_JobObjects", "Win32_System_Diagnostics_ToolHelp"] }

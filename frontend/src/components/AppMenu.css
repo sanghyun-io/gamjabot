@@ -1,0 +1,11 @@
+.app-menu-popover { z-index: var(--z-popover, 90); padding: 6px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--bg-elevated); box-shadow: var(--shadow-float); overflow: auto; }
+.app-menu { min-width: 0; color: var(--text-body); }
+.app-menu__heading { margin: 8px 10px 6px; color: var(--text-muted); font-size: 12px; font-weight: 600; }
+.app-menu nav { display: grid; gap: 2px; }
+.app-menu nav a { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 8px 10px; border-radius: var(--radius-sm, 6px); color: var(--text-body); font-size: 14px; text-decoration: none; }
+.app-menu nav a:hover, .app-menu nav a[aria-current='page'] { color: var(--text-strong); background: var(--bg-subtle); }
+.app-menu nav a:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.app-menu__preferences { margin-top: 6px; padding: 12px 10px 8px; border-top: 1px solid var(--line); }
+.app-menu__preferences .locale-selector { max-width: none !important; width: 100%; }
+.app-menu__preferences .locale-selector select { width: 100%; max-width: 100%; }
+@media (pointer: coarse) { .app-menu nav a { min-height: 44px; } }

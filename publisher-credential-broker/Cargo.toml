@@ -1,0 +1,24 @@
+[package]
+name = "gamja-template-publisher-credential-broker"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "gamja-template-publisher-credential-broker"
+path = "src/main.rs"
+
+[dependencies]
+getrandom = "=0.3.4"
+libc = "=0.2.189"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+zeroize = { version = "=1.9.0", features = ["serde"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation = "=0.10.1"
+security-framework = "=3.7.0"
+security-framework-sys = "=2.17.0"

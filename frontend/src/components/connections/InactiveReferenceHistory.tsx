@@ -1,0 +1,15 @@
+import {useSyncExternalStore} from 'react'
+import {useI18n} from '../../i18n'
+import {inactiveReferenceVersion,readInactiveReferences,subscribeInactiveReferences,type InactiveReferenceRequest} from '../../lib/inactiveReferenceWorkspace'
+import CommandHistoryArchive from '../CommandHistoryArchive'
+export default function InactiveReferenceHistory({identity,connectionId}:{identity:string;connectionId?:number}){
+ const {t,formatDateTime}=useI18n();useSyncExternalStore(subscribeInactiveReferences,inactiveReferenceVersion)
+ const requests=readInactiveReferences(identity).requests.filter(row=>connectionId===undefined||row.connection.id===connectionId),latest=requests.at(-1)
+ if(!latest)return null
+ const important=new Set(requests.filter(row=>row.phase==='sending'||row.phase==='unknown').map(row=>row.id));important.add(latest.id)
+ const phase=(row:InactiveReferenceRequest)=>row.phase==='sending'?'pending' as const:row.phase==='received'?'succeeded' as const:row.phase
+ const label=(row:InactiveReferenceRequest)=>t(row.phase==='sending'?'inactiveHistory.sending':row.phase==='received'?'inactiveRefs.succeeded':row.phase==='rejected'?'inactiveRefs.rejected':'inactiveRefs.unknown')
+ const content=(row:InactiveReferenceRequest)=><div className={`notice stack stack--tight ${row.phase==='received'?'notice--success':row.phase==='sending'?'notice--info':'notice--warning'}`} style={{overflowWrap:'anywhere'}}><strong>#{row.target.id} · {row.target.name}</strong><p>{row.connection.label} · #{row.connection.id} · {row.target.model_id||row.target.model}</p><p className="metadata">{formatDateTime(row.startedAt,{dateStyle:'medium',timeStyle:'medium'})}</p><p role={row.phase==='unknown'||row.phase==='rejected'?'alert':'status'}>{label(row)}</p>{row.finishedAt&&<p className="metadata">{t('inactiveHistory.finished',{time:formatDateTime(row.finishedAt,{dateStyle:'medium',timeStyle:'medium'})})}</p>}<details className="compact-details"><summary>{t('common.technicalDetails')}</summary><p className="technical">{row.id}</p><p>{t('inactiveHistory.original',{connection:row.target.connection_id??'',model:row.target.model_id||row.target.model})}</p></details></div>
+ const older=requests.filter(row=>!important.has(row.id)).reverse()
+ return <section className="stack stack--tight" aria-label={t('inactiveHistory.title')}><h3 className="section-title">{t('inactiveHistory.title')}</h3><p className="field-hint">{t('inactiveHistory.scope')}</p>{requests.filter(row=>important.has(row.id)).map(row=><div key={row.id}>{content(row)}</div>)}{older.length>0&&<CommandHistoryArchive key={`${identity}:${connectionId??'all'}`} title={t('projects.workspace.previous')} items={older.map(row=>({id:row.id,phase:phase(row),search:[row.target.name,String(row.target.id),`#${row.target.id}`,row.connection.label,String(row.connection.id),`#${row.connection.id}`,row.target.model_id||row.target.model,row.id,row.startedAt,formatDateTime(row.startedAt,{dateStyle:'medium',timeStyle:'short'})],content:content(row)}))}/>}</section>
+}

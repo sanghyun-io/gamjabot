@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a non-sensitive problem
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, private data, payment information, or raw logs. Report security issues privately as described in SECURITY.md.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the behavior and the expected result using synthetic data.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the source revision and platform, and say which checks you actually ran.
+    validations:
+      required: true

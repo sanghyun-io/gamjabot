@@ -1,0 +1,6 @@
+"""Owner card reference metadata and value-free command receipts."""
+VERSION=56
+REQUIRED_COLUMNS={'vault_cards':{'owner_id','item_id','cardholder','expiry_month','expiry_year','billing','nickname','hint','last4','revision','is_active','created_at','updated_at'},'vault_card_commands':{'owner_id','command_key','request_digest','response'}}
+def upgrade(db):
+    db.execute('''CREATE TABLE vault_cards (owner_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, item_id TEXT NOT NULL CHECK(length(item_id)=32 AND item_id NOT GLOB '*[^0-9a-f]*'), cardholder TEXT NOT NULL, expiry_month INTEGER NOT NULL CHECK(expiry_month BETWEEN 1 AND 12), expiry_year INTEGER NOT NULL CHECK(expiry_year BETWEEN 2000 AND 9999), billing TEXT NOT NULL, nickname TEXT NOT NULL, hint TEXT NOT NULL, last4 TEXT CHECK(last4 IS NULL OR (length(last4)=4 AND last4 NOT GLOB '*[^0-9]*')), revision INTEGER NOT NULL CHECK(revision>0), is_active INTEGER NOT NULL CHECK(is_active IN (0,1)), created_at TEXT NOT NULL, updated_at TEXT NOT NULL, PRIMARY KEY(owner_id,item_id))''')
+    db.execute('''CREATE TABLE vault_card_commands (owner_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, command_key TEXT NOT NULL, request_digest TEXT NOT NULL, response TEXT NOT NULL, PRIMARY KEY(owner_id,command_key))''')

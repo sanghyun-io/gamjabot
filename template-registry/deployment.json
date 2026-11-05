@@ -1,0 +1,14 @@
+{
+  "status": "unconfigured_source_only",
+  "environment": null,
+  "host": null,
+  "public_origin": null,
+  "publisher_hash_file": null,
+  "database_path": null,
+  "tls_termination": null,
+  "backup_policy": null,
+  "secret_management": null,
+  "operating_cost": null,
+  "deployment_authorization": "Owner approval required before deployment or public network exposure",
+  "public_origin_env": "REGISTRY_PUBLIC_ORIGIN"
+}

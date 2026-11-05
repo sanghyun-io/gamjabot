@@ -1,0 +1,45 @@
+# Credentials, user data and local configuration
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.cer
+*.db
+*.sqlite
+*.sqlite3
+*.log
+# Local dependencies and generated outputs
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+coverage/
+.pytest_tmp/
+dist/
+build/
+target/
+*.tsbuildinfo
+frontend/storybook-static/
+frontend/.cache/
+frontend/src-tauri/binaries/
+frontend/src-tauri/resources/playwright-browsers/
+frontend/src-tauri/resources/gamja-core/
+frontend/src-tauri/gen/
+*.dmg
+*.exe
+*.msi
+*.app/
+*.so
+*.dylib
+.DS_Store
+# Local-only audits and private operation notes
+.local/
+docs/.logs/

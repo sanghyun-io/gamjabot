@@ -1,0 +1,51 @@
+html[data-preview-theme='dark'] {
+  color-scheme: dark;
+  --bg-canvas: #0b111b;
+  --bg-surface: #111a27;
+  --bg-subtle: #182334;
+  --bg-elevated: #172233;
+  --text-strong: #f3f6fa;
+  --text-body: #d7dfea;
+  --text-muted: #aeb9c8;
+  --line: #344257;
+  --line-strong: #4a5c73;
+  --field-line: #718096;
+  --primary: #51a7e8;
+  --primary-hover: #78bdf0;
+  --primary-on: #07111c;
+  --teal: #56c7bb;
+  --teal-surface: #133330;
+  --amber: #f5b84c;
+  --amber-surface: #332510;
+  --danger: #ff8b91;
+  --danger-surface: #35171c;
+  --focus: #78bdf0;
+  --shadow-float: 0 18px 44px rgb(0 0 0 / 0.42);
+}
+
+html[data-preview-theme='light'] {
+  color-scheme: light;
+  --bg-canvas: #f7f5f1;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f0eee9;
+  --bg-elevated: #ffffff;
+  --text-strong: #172033;
+  --text-body: #273449;
+  --text-muted: #5b6678;
+  --line: #dcd9d2;
+  --line-strong: #c4c0b7;
+  --field-line: #76746e;
+  --primary: #1769aa;
+  --primary-hover: #125789;
+  --primary-on: #ffffff;
+  --teal: #087a73;
+  --teal-surface: #e1f3f0;
+  --amber: #9a5b00;
+  --amber-surface: #fff3d9;
+  --danger: #b4232d;
+  --danger-surface: #fce8e9;
+  --focus: #0b76c5;
+  --shadow-float: 0 12px 36px rgb(17 24 39 / 0.18);
+}
+
+/* Synthetic event controls live in Storybook Controls, never over the product canvas. */

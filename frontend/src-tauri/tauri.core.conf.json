@@ -1,0 +1,13 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "bundle": {
+    "externalBin": [
+      "binaries/gamja-artifact"
+    ],
+    "resources": {
+      "../../scripts/Diagnostics Help.txt": "Diagnostics Help.txt",
+      "resources/playwright-browsers/": null,
+      "resources/gamja-core/": "gamja-core/"
+    }
+  }
+}
